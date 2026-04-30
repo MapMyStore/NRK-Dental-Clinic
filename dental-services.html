@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NRK Dental Services | Complete Dental Care in Salem</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Comprehensive dental services at NRK Multispeciality Dental Care - General Dentistry, Cosmetic, Orthodontics, Implants, Whitening, Root Canal therapy in Salem." />
+  <meta name="keywords" content="dental services Salem, general dentistry, cosmetic dentistry, orthodontics, dental implants, teeth whitening, root canal" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --primary: #6B46E0;
+      --primary-dark: #5535c4;
+      --primary-light: #EEE9FF;
+      --primary-light-bg: #F3F1FF;
+      --text-dark: #0F0F1A;
+      --text-body: #4B5563;
+      --text-muted: #6B7280;
+      --white: #ffffff;
+      --light-bg: #F8F7FF;
+      --dark-footer: #0D1117;
+      --border: #E5E7EB;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(107,70,224,0.08);
+      --shadow-md: 0 8px 40px rgba(107,70,224,0.13);
+      --accent-gold: #F59E0B;
+      --font: 'DM Sans', sans-serif;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: var(--font); 
+      color: var(--text-dark); 
+      background: var(--primary-light-bg); 
+      line-height: 1.6; 
+    }
+    img { max-width: 100%; display: block; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul, li { list-style: none; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section-label { 
+      font-size: 12px; 
+      font-weight: 700; 
+      letter-spacing: 0.15em; 
+      text-transform: uppercase; 
+      color: var(--primary); 
+      margin-bottom: 16px; 
+    }
+    .section-title { 
+      font-size: clamp(32px, 5vw, 48px); 
+      font-weight: 800; 
+      color: var(--text-dark); 
+      line-height: 1.15; 
+      margin-bottom: 16px; 
+    }
+    .section-title .accent { color: var(--primary); }
+    .text-white { color: white; }
+    .text-center { text-align: center; }
+          .text-gradient-purple {
+  background: linear-gradient(135deg, var(--primary) 10%, rgba(118, 44, 208, 0.681) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+    /* ===== BUTTONS ===== */
+    .btn { 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center;
+      gap: 8px; 
+      padding: 14px 32px; 
+      border-radius: 30px; 
+      font-size: 15px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s ease; 
+      border: 2px solid transparent; 
+      white-space: nowrap; 
+    }
+    .btn-primary { 
+      background: var(--primary); 
+      color: var(--white); 
+    }
+    .btn-primary:hover { 
+      background: var(--primary-dark); 
+      transform: translateY(-2px); 
+      box-shadow: 0 12px 24px rgba(107,70,224,0.3); 
+    }
+    .btn-outline { 
+      background: transparent; 
+      color: var(--primary); 
+      border: 2px solid var(--primary); 
+    }
+    .btn-outline:hover { 
+      background: rgba(107,70,224,0.05); 
+      transform: translateY(-2px); 
+    }
+    .btn-white { 
+      background: var(--white); 
+      color: var(--primary); 
+      border: 2px solid var(--white);
+    }
+    .btn-white:hover { 
+      background: var(--primary-light); 
+    }
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 17px;
+      font-weight:500;
+      font-family: sans-serif
+    }
+
+     /* ===== NAVBAR ===== */
+    .container-nav { max-width: 1500px; margin: 0 auto; padding: 0 24px; }
+    #navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    #navbar.scrolled { 
+      box-shadow: var(--shadow); 
+    }
+    .navbar-inner { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      height: 110px; 
+      gap: 20px;
+    }
+    .navbar-logo { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px;
+      font-size: 18px; 
+      font-weight: 800; 
+      color: var(--text-dark);
+    }
+    .navbar-logo-icon { 
+      width: 200px;
+      height: 100%;
+    
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .navbar-links { 
+      display: flex; 
+      align-items: center; 
+      gap: 40px; 
+    }
+    .navbar-links a { 
+      font-size: 20px; 
+      font-weight: 600; 
+      color: var(--text-body); 
+      transition: color 0.2s; 
+    }
+    .navbar-links a:hover,
+    .navbar-links a.active { 
+      color: var(--primary); 
+    }
+    .navbar-right { 
+      display: flex; 
+      align-items: center; 
+      gap: 20px; 
+    }
+    .navbar-phone { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px;
+      font-size: 14px; 
+      font-weight: 600; 
+      color: var(--text-body); 
+    }
+    .navbar-phone svg { 
+      color: var(--primary); 
+      flex-shrink: 0;
+    }
+    .hamburger { 
+      display: none; 
+      flex-direction: column; 
+      gap: 5px; 
+      cursor: pointer; 
+      background: none; 
+      border: none; 
+      padding: 4px;
+    }
+    .hamburger span { 
+      display: block; 
+      width: 24px; 
+      height: 2px; 
+      background: var(--text-dark); 
+      border-radius: 2px; 
+      transition: all 0.3s; 
+    }
+    .mobile-menu { 
+      display: none; 
+      flex-direction: column; 
+      gap: 0; 
+      background: white; 
+      border-top: 1px solid var(--border); 
+      padding: 16px 24px 24px; 
+    }
+    .mobile-menu a { 
+      padding: 12px 0; 
+      font-size: 16px; 
+      font-weight: 500; 
+      color: var(--text-body); 
+      border-bottom: 1px solid var(--border); 
+    }
+    .mobile-menu a:last-child { border: none; }
+    .mobile-menu.open { display: flex; }
+
+    /* ===== HERO SECTION ===== */
+    #hero {
+      background: 
+        linear-gradient(135deg, rgba(76, 20, 172, 0.854) 0%, rgba(78, 14, 161, 0.786) 50%, rgba(87, 31, 165, 0.686) 100%);
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 0 60px;
+      color: white;
+      backdrop-filter: blur(1px);
+      
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -60px;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-inner { 
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 32px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .process-badge {
+      
+      backdrop-filter: blur(10px);
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom:10px;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-family: sans-serif
+    }
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+    .hero-content {
+      max-width: 1000px;
+    }
+    .hero-title {
+      font-size: clamp(50px, 7vw, 60px);
+      font-weight: 900;
+      line-height: 1.1;
+      
+    }
+    .hero-title .highlight {
+      color: #FFD700;
+      font-size: clamp(55px, 7vw,100px);
+      display: block;
+    }
+    .hero-desc {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 25px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-top:10px;
+      margin-right: auto;
+    }
+    .hero-checks { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-bottom: 24px; }
+    .hero-check { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 300; }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 24px 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+      margin-top: 24px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .stat {
+      text-align: center;
+      flex: 1;
+      min-width: 100px;
+    }
+    .stat-value {
+      font-size: 32px;
+      font-weight: 800;
+      display: block;
+    }
+    .stat-label {
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    .rating-badge {
+      background: rgba(245, 158, 11, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 16px 20px;
+      border-radius: 12px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+    }
+    .rating-badge .stars {
+      font-size: 14px;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+    }
+    .rating-badge .count {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== QUICK NAVIGATION ===== */
+    .quick-nav {
+      background: transparent;
+      padding: 24px 0;
+      margin-top:10px;
+      align-items:center;
+    }
+    .quick-nav-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .quick-nav-items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .quick-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.696);
+      backdrop-filter:10px;
+      color: var(--text-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .quick-nav-item:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    .quick-nav-item svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ===== SERVICES OVERVIEW SECTION ===== */
+    #services-overview {
+      background: white;
+      padding: 80px 0;
+    }
+    .services-overview-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+    .services-overview-header-content h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .services-overview-header-content h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+    .services-overview-header-content h2 .accent {
+      color: var(--primary);
+    }
+    .award-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .award-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ===== SERVICES GRID ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr ;
+      gap: 24px;
+    }
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+    .service-card.featured {
+      background: var(--primary);
+      color: white;
+      grid-column: 1;
+      grid-row: span 2;
+      border: none;
+    }
+    .service-card.featured:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(107,70,224,0.3);
+    }
+    .service-card.featured h3 {
+      color: white;
+    }
+    .service-card.featured p {
+      color: rgba(255,255,255,0.9);
+    }
+    .service-card.featured .service-duration {
+      color: rgba(255,255,255,0.8);
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .service-card.featured .service-icon {
+      background: rgba(255,255,255,0.2);
+      color: white;
+    }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    .service-duration {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+    .service-duration svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ===== SERVICE DETAIL SECTIONS ===== */
+    .service-detail-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-detail-section:last-child {
+      border-bottom: none;
+    }
+    .service-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .service-detail-inner.reverse {
+      grid-template-columns: 1fr 1fr;
+    }
+    .service-detail-inner.reverse .service-detail-image {
+      order: 1;
+    }
+    .service-detail-inner.reverse .service-detail-content {
+      order: 2;
+    }
+    .service-number-card{
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        width: 140px;
+        height: 130px;
+        background: rgba(255, 255, 255, 0.662);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        z-index: 8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-detail-number { 
+      position: absolute;
+      
+      font-size: 100px;
+      font-weight: 900;
+      line-height: 1;
+      z-index: 10;
+    }
+    .service-detail-image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 400px;
+      box-shadow: var(--shadow-md);
+    }
+    .service-detail-label {
+      
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+      background: var(--primary);
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      align-items: center;
+      gap: 6px;
+     
+      max-width:180px;
+      max-height:40px;
+      font-family:sans-serif
+    }
+    .service-detail-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .service-detail-desc {
+      font-size: 16px;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .service-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .service-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-body);
+      font-weight: 500;
+      background:white;
+      padding:10px 5px;
+      padding-left:20px;
+      border-radius: 15px;
+    }
+    .service-feature svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .service-detail-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .service-detail-actions .btn {
+      flex: 0 1 auto;
+    }
+    .service-detail-image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-light-bg) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 60px;
+    }
+    .service-detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .duration-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .duration-badge .label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .duration-badge .value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .service-icon img{
+      border-radius:20px;
+    }
+    .service-card.featured .service-icon {
+      background: rgba(255,255,255,0.2);
+      color: white;
+    }
+    .service-header{
+        display:flex;
+        align-items:center;
+        gap:20px;
+        
+    }
+    /* ===== PROCESS SECTION ===== */
+    #process {
+      background: white;
+      padding: 80px 0;
+    }
+    .process-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .process-header .section-label {
+      margin-bottom: 16px;
+    }
+    .process-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .process-header h2 .accent {
+      color: var(--primary);
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .process-step-number {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary) 10%, rgba(118, 44, 208, 0.681) 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 20px rgba(107,70,224,0.2);
+    }
+    .process-step-title {
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .process-step-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* ===== CTA SECTION ===== */
+    #cta {
+      background: linear-gradient(135deg, var(--primary) 0%, #5535c4 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    #cta::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .cta-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+    .cta-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-title .italic {
+      font-style: italic;
+    }
+    .cta-desc {
+      font-size: 16px;
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .booking-box {
+      background: rgba(255, 255, 255, 0.384);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      color: var(--text-dark);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    .booking-box h3 {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    .booking-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .booking-option:last-child {
+      border-bottom: none;
+    }
+    .booking-option:hover {
+      transform: translateX(4px);
+    }
+    .booking-option-icon {
+      width: 40px;
+      height: 40px;
+      
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      margin-right: 16px;
+      font-size: 25px;
+      flex-shrink: 0;
+    }
+    .booking-option-content {
+      flex: 1;
+    }
+    .booking-option-label {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.657);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .booking-option-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+    }
+    .booking-option-arrow {
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: var(--dark-footer);
+      color: rgba(255,255,255,0.7);
+      padding: 60px 0 0;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 40px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 12px;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+    .footer-col ul li a {
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover {
+      color: white;
+    }
+    .footer-contact p {
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-contact svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .footer-hours {
+      margin-top: 16px;
+    }
+    .footer-hours h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .footer-hours p {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-legal a:hover {
+      color: white;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card.featured { grid-row: auto; }
+      .service-detail-inner { grid-template-columns: 1fr; gap: 40px; }
+      .service-detail-inner.reverse .service-detail-image { order: auto; }
+      .service-detail-inner.reverse .service-detail-content { order: auto; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 60px 0; }
+      .container { padding: 0 16px; }
+      .navbar-links,
+      .navbar-phone,
+      .navbar-right .btn { display: none; }
+      .hamburger { display: flex; }
+      .navbar-inner { height: 70px; }
+      .quick-nav-items { gap: 12px; }
+      .quick-nav-item { padding: 6px 12px; font-size: 12px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-detail-inner { gap: 30px; }
+      .service-detail-number { font-size: 80px; }
+      .process-steps { grid-template-columns: 1fr; }
+      .process-steps::before { display: none; }
+      .process-step { padding: 24px 0; border-bottom: 1px solid var(--border); }
+      .booking-box { padding: 24px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 40px 0; }
+      .section-title { font-size: 24px; }
+      .hero-title { font-size: 28px; }
+      .services-overview-header { grid-template-columns: 1fr; }
+      .service-features-grid { grid-template-columns: 1fr; }
+      .service-detail-actions { flex-direction: column; }
+      .service-detail-actions .btn { width: 100%; }
+      .process-step-number { width: 60px; height: 60px; font-size: 20px; }
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header id="navbar" role="banner">
+  <div class="container-nav">
+    <nav class="navbar-inner" aria-label="Main navigation">
+      <a href="/" class="navbar-logo" aria-label="NRK Dental Care Home">
+        <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.svg"></div>
+        
+      </a>
+      
+      <ul class="navbar-links" role="list">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="dental-services">Services</a></li>
+        <li><a href="about#team">Our Team</a></li>
+        <li><a href="gallery">Gallery</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        
+        <a href="appointment" class="btn btn-primary">Book Appointment</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/">Home</a>
+    <a href="about">About</a>
+    <a href="dental-services">Services</a>
+    <a href="about#team">Our Team</a>
+    <a href="gallery">Gallery</a>
+    <a href="#footer">Contact</a>
+    <a href="appointment" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 16px;">Book Appointment</a>
+  </div>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+
+
+<!-- ===== HERO SECTION ===== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+          OUR TREATMENTS
+        </div>
+
+      <h1 class="hero-title">Advanced dental solutions for </br> <span style="color:#FFD700; font-style:italic">Every Smile </span>in Salem.</h1>
+
+      <p class="hero-desc">From routine check-ups to dental implants, root canal treatment, cosmetic dentistry, and braces.</br> Complete patient-focused dental care under one roof.</p>
+
+      <div class="hero-buttons">
+        <a href="appointment" class="btn btn-white">Book a consultation</a>
+        <a href="#general" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: white;">Explore services</a>
+      </div>
+    </div>
+  </div>
+  <section class="quick-nav text-center">
+  <div class="container">
+    <div class="quick-nav-label">Quick navigation:</div>
+    <div class="quick-nav-items">
+      <a href="#general-checkup" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+        Routine care
+      </a>
+      <a href="#smile-design" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Smile design
+      </a>
+      <a href="#ortho" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm8 0h-2v2h2v-2zm4-7H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-5.04-6.71l-2.75 3.54-2.12-2.12-4.02 4.02h12.3l-3.41-4.44z"/></svg>
+        Alignment
+      </a>
+      <a href="#implants" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+        Tooth replacement
+      </a>
+      <a href="#whitening" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Brightening
+      </a>
+      <a href="#rct" class="quick-nav-item">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        Save the tooth
+      </a>
+    </div>
+  </div>
+</section>
+</section>
+
+
+
+<!-- ===== SERVICE DETAILS ===== -->
+
+<!-- Service 1: General Dentistry -->
+ <section id="implants">
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">01</div> </div>
+             
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Dental Implant.png"></div>
+        <div class="service-detail-label text-center">Service 1</div>
+        </div>
+        
+        <h2 class="service-detail-title">Dental Implants in Salem</h2>
+        <p class="service-detail-desc">Replace missing teeth permanently with advanced dental implants that look, feel, and function like natural teeth. Our implant specialists use precise techniques and modern technology to ensure safe placement, long-lasting durability, and improved oral function. Restore your smile, confidence, and chewing ability with reliable implant solutions.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Single Tooth Implants
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Multiple Teeth Replacement
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Implant-Supported Crowns
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Permanent Smile Restoration
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <a href="tel:+918248203459" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+
+<!-- Service 2: Cosmetic Dentistry -->
+ <section id="rct">
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+    
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Root Canal.png"></div>
+        <div class="service-detail-label text-center">Service 2</div>
+        </div>
+        
+        <h2 class="service-detail-title">Root Canal Treatment in Salem</h2>
+        <p class="service-detail-desc">Save infected or damaged teeth with pain-free root canal treatment at NRK Multispeciality Dental Care in Salem. Our experienced dental team uses advanced technology and gentle techniques to remove infection, preserve your natural tooth, and restore its strength and function. We focus on quick, comfortable procedures that relieve severe tooth pain and support long-term oral health with lasting results.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Pain-Free Root Canal
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Tooth Infection Treatment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Tooth Preservation
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+           Quick Recovery Care
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i>Call Us</button>
+        </div>
+      </div>
+
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">02</div> </div>
+             
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<!-- Service 3: Orthodontics -->
+ <section id="whitening">
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">03</div> </div>
+             
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Teeth whitening.png"></div>
+        <div class="service-detail-label text-center">Service 3</div>
+        </div>
+        
+        <h2 class="service-detail-title">Teeth Whitening in Salem</h2>
+        <p class="service-detail-desc">Brighten your smile with professional teeth whitening at NRK Multispeciality Dental Care in Salem. Our safe and advanced whitening treatments help remove stains, discoloration, and dullness caused by food, beverages, and lifestyle habits. Using effective modern techniques, we deliver visible results in a short time, helping you achieve a whiter, more confident, and radiant smile with long-lasting brightness.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Stain Removal Treatment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Yellow Teeth Correction
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Instant Smile Brightening
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Long-Lasting Results
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i>Call Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<!-- Service 4: Dental Implants -->
+<section id="general" class="service-detail-section">
+  <div class="container" id="smile-design">
+    <div class="service-detail-inner">
+    
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Cosmetic DEntistry.png"></div>
+        <div class="service-detail-label text-center">Service 4</div>
+        </div>
+        
+        <h2 class="service-detail-title">Cosmetic Dentistry in Salem</h2>
+        <p class="service-detail-desc">Enhance your smile with advanced cosmetic dentistry at NRK Multispeciality Dental Care in Salem. We provide personalized smile improvement treatments including veneers, dental bonding, teeth reshaping, and smile makeovers to correct stains, gaps, chips, uneven teeth, and minor alignment concerns. Our focus is to improve both appearance and function, giving you a natural-looking, confident smile tailored to your facial features and preferences. </p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Gap Correction
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Chipped Teeth Repair
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Smile Makeover
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Veneers & Bonding
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <a href="tel:+918248203459" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">04</div>  </div>
+            
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 5: Teeth Whitening -->
+ <section id="ortho">
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">05</div>  </div>
+            
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Othodontics.png"></div>
+        <div class="service-detail-label text-center">Service 5</div>
+        </div>
+        
+        <h2 class="service-detail-title">Orthodontics & Braces in Salem</h2>
+        <p class="service-detail-desc">Straighten crooked or misaligned teeth with advanced orthodontic treatment at NRK Multispeciality Dental Care in Salem. We provide customized solutions including traditional braces and clear aligners to correct crowding, gaps, bite issues, and uneven alignment. Our personalized treatment plans help improve smile appearance, chewing function, oral hygiene, and long-term dental health while building confidence with every smile.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Crooked Teeth Correction
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Gap Closing Treatment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Bite Alignment Correction
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Braces & Clear Aligners
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- Service 6: Root Canal Therapy -->
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+    
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/General Tooth Icon.png"></div>
+        <div class="service-detail-label text-center">Service 6</div>
+        </div>
+        
+        <h2 class="service-detail-title">Dental Crowns & Bridges in Salem</h2>
+        <p class="service-detail-desc">Restore damaged, weak, or missing teeth with high-quality dental crowns and bridges at NRK Multispeciality Dental Care in Salem. We provide durable, natural-looking restorations designed to improve chewing ability, protect weakened teeth, and close gaps caused by missing teeth. Using precise techniques and modern materials, our crowns and bridges help restore strength, function, appearance, and long-term oral comfort with confident results.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Broken Tooth Restoration
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Missing Teeth Replacement
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Gap Closing Solution
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+           Natural-Looking Crowns
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+
+      <div class="service-detail-image">
+       <div class="service-number-card"> <div class="service-detail-number text-gradient-purple">06</div> </div>
+            
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 7: Gum Treatment -->
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">07</div> </div>
+             
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Gum Treatment.png"></div>
+        <div class="service-detail-label text-center">Service 7</div>
+        </div>
+        
+        <h2 class="service-detail-title">Gum Treatment in Salem</h2>
+        <p class="service-detail-desc">Protect your oral health with advanced gum treatment at NRK Multispeciality Dental Care in Salem. We provide effective care for bleeding gums, gum infections, swelling, bad breath, and periodontal disease using modern dental techniques. Our treatments focus on removing infection, restoring healthy gums, preventing tooth loss, and strengthening the support around your teeth for long-term oral health. Early gum treatment can help stop progression and preserve your natural smile.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Bleeding Gums Treatment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Gum Infection Control
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Bad Breath Solution
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Tooth Loss Prevention
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 8: Root Canal Therapy -->
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+    
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Tooth Extraction.png"></div>
+        <div class="service-detail-label text-center">Service 8</div>
+        </div>
+        
+        <h2 class="service-detail-title">Tooth Extraction in Salem</h2>
+        <p class="service-detail-desc">Safe and painless tooth extraction at NRK Multispeciality Dental Care in Salem when a tooth is severely damaged, infected, loose, or causing pain. Our experienced dental team performs gentle extractions with precision and modern techniques to ensure minimal discomfort and faster recovery. We also provide complete aftercare guidance to support healing, reduce swelling, and protect your long-term oral health.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Wisdom Tooth Removal
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Decayed Tooth Removal
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Tooth Extraction Treatment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Pain Relief Care
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+
+      <div class="service-detail-image">
+       <div class="service-number-card"><div class="service-detail-number text-gradient-purple">08</div> </div>
+             
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 9: Gum Treatment -->
+<section id="general" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-detail-image">
+       <div class="service-number-card">   <div class="service-detail-number text-gradient-purple">09</div>  </div>
+         
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+
+      <div class="service-detail-content">
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/General Checkup.png"></div>
+        <div class="service-detail-label text-center">Service 9</div>
+        </div>
+        
+        <h2 class="service-detail-title">Pediatric Dentistry in Salem</h2>
+        <p class="service-detail-desc">Give your child a healthy start with gentle pediatric dentistry at NRK Multispeciality Dental Care in Salem. We provide child-friendly dental care focused on cavity prevention, early diagnosis, routine check-ups, cleanings, fillings, and healthy oral habit guidance. Our comfortable and friendly environment helps children feel relaxed while building positive dental experiences and lifelong confidence. Early dental visits help detect problems sooner and support healthy teeth development.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Kids Dental Checkups
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Cavity Prevention Care
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Tooth Fillings for Kids
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Healthy Oral Habit Guidance
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 10: Root Canal Therapy -->
+<section id="general" class="service-detail-section">
+  <div class="container" id="general-checkup">
+    <div class="service-detail-inner">
+    
+      <div class="service-detail-content" >
+        <div class="service-header">
+            <div class="service-icon"><img src="./Assets/img/icons/Pediatric Dentistry.png"></div>
+        <div class="service-detail-label text-center">Service 10</div>
+        </div>
+        
+        <h2 class="service-detail-title">General Dental Checkup in Salem</h2>
+        <p class="service-detail-desc">Maintain a healthy smile with regular dental checkups at NRK Multispeciality Dental Care in Salem. We provide comprehensive oral examinations, professional cleanings, tooth-colored fillings, and preventive dental care to detect problems early and avoid costly treatments later. Our experienced dental team focuses on plaque removal, cavity prevention, gum health, and long-term oral wellness to keep your teeth strong, clean, and healthy. Routine checkups help identify dental issues early and support better oral health for every age group.</p>
+        
+        <div class="service-features-grid">
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Oral Health Assessment
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Gum Health Screening
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Family Dental Checkup
+          </div>
+          <div class="service-feature">
+            <i class="fa-regular fa-circle-check" style="font-size:18px;color:var(--primary)"></i>
+            Preventive Dental care
+          </div>
+        </div>
+
+        <div class="service-detail-actions">
+          <a href="appointment" class="btn btn-primary btn-sm">Book this service →</a>
+          <button class="btn btn-outline btn-sm">Ask a question</button>
+        </div>
+      </div>
+
+      <div class="service-detail-image">
+       <div class="service-number-card"> <div class="service-detail-number text-gradient-purple">10</div></div>
+              
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== PROCESS SECTION ===== -->
+<section id="process">
+  <div class="container">
+    <div class="process-header">
+      <div class="process-badge text-center">
+          OUR PROCESS
+        </div>
+      <h2>Simple Steps to a <span class="text-gradient-purple">Healthier Smile.</span></h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step fade-in">
+        <div class="process-step-number">01</div>
+        <h3 class="process-step-title">Book Online</h3>
+        <p class="process-step-desc">Schedule your visit in under a minute through our easy booking form.</p>
+      </div>
+
+      <div class="process-step fade-in">
+        <div class="process-step-number">02</div>
+        <h3 class="process-step-title">Consultation</h3>
+        <p class="process-step-desc">Meet with our specialist for a thorough exam and personalized plan.</p>
+      </div>
+
+      <div class="process-step fade-in">
+        <div class="process-step-number">03</div>
+        <h3 class="process-step-title">Treatment</h3>
+        <p class="process-step-desc">Receive comfortable, expert care using modern techniques and tech.</p>
+      </div>
+
+      <div class="process-step fade-in">
+        <div class="process-step-number">04</div>
+        <h3 class="process-step-title">Follow-up</h3>
+        <p class="process-step-desc">We stay connected post-treatment to ensure you're thriving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <div class="cta-label">Reach Out to Cure your Dental Promblems</div>
+        <h2 class="cta-title">Let's build your <span class="italic">personalized</span> treatment plan.</h2>
+        <p class="cta-desc">Book a consultation and our team will diagnose the problem and design a treatment plan tailored to your smile goals.</p>
+      </div>
+
+      <div class="booking-box">
+        <h3>Book Your Appointment</h3>
+
+        <div class="booking-option">
+          <div class="booking-option-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="booking-option-content">
+            <div class="booking-option-label">Call us</div>
+            <div class="booking-option-value">(555) 123-4567</div>
+          </div>
+          <div class="booking-option-arrow">→</div>
+        </div>
+
+        <div class="booking-option">
+          <div class="booking-option-icon"><i class="fa-regular fa-calendar-check"></i></div>
+          <div class="booking-option-content">
+            <div class="booking-option-label">Online booking</div>
+            <div class="booking-option-value">Quick & easy</div>
+          </div>
+          <div class="booking-option-arrow">→</div>
+        </div>
+
+        <div class="booking-option">
+          <div class="booking-option-icon"><i class="fa-solid fa-person-walking"></i></div>
+          <div class="booking-option-content">
+            <div class="booking-option-label">Walk-in</div>
+            <div class="booking-option-value">Mon-Sat, 10AM-8:30PM</div>
+          </div>
+          <div class="booking-option-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="navbar-logo">
+          <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.png"></div>
+          
+        </div>
+        <p>Providing exceptional dental care in Salem with modern technology and a compassionate approach. Your smile is our priority.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#testimonials">Gallery</a></li>
+          <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#general">General Dentistry</a></li>
+          <li><a href="#cosmetic">Cosmetic Dentistry</a></li>
+          <li><a href="#ortho">Orthodontics</a></li>
+          <li><a href="#implants">Dental Implants</a></li>
+          <li><a href="#whitening">Teeth Whitening</a></li>
+          <li><a href="#rct">Root Canal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>1st Floor, Valmo Office, Sarada College Rd, Ponnandigounder Nagar, LRN Colony, Salem, Tamil Nadu 636007</span>
+        </p>
+        <p>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81A19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+918248203459">8248203459</a>
+        </p>
+        <p>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@dentcare.com">info@dentcare.com</a>
+        </p>
+        <div class="footer-hours">
+          <h5>Business Hours</h5>
+          <p>Mon – Sat : 10:00 AM – 8:30 PM</p>
+          <p>Sun : Closed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> NRK Multispeciality Dental Care. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Dynamic year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Fade-in animations on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => fadeObserver.observe(el));
+
+  // Smooth anchor navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
