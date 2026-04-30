@@ -232,7 +232,7 @@
       color: var(--text-body); 
       border-bottom: 1px solid var(--border); 
     }
-    .mobile-menu a:last-child { border: none; }
+    .mobile-menu a:last-child { border: none; color:white}
     .mobile-menu.open { display: flex; }
 
     /* ===== HERO SECTION ===== */
@@ -559,9 +559,9 @@
             position: relative;
             padding: 8rem 1.5rem;
             scroll-margin-top: 6rem;
-            /* background: linear-gradient(135deg, rgba(107, 70, 224, 0.1), rgba(168, 85, 247, 0.05)), 
-                        linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98)); */
-            background: url(./Assets/img/service\ background.png) center/cover no-repeat;
+            background:linear-gradient(135deg, rgba(2, 0, 7, 0.767) 0%, rgba(24, 19, 41, 0.702) 50%, rgba(11, 9, 21, 0.667) 100%),
+        url(./Assets/img/service\ background.png) center/cover no-repeat;
+            /* background: url(./Assets/img/service\ background.png) center/cover no-repeat; */
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -599,6 +599,7 @@
             font-size: clamp(2rem, 6vw, 3.5rem);
             margin-bottom: 1rem;
             line-height: 1.2;
+            color:white;
         }
 
         .academy-header .label {
@@ -842,6 +843,19 @@
       align-items: flex-start;
       margin-bottom:20px;
     }
+    .why-card-1 {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      text-align: left;
+      transition: all 0.3s ease;
+      border: none;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom:20px;
+      margin-left:50px;
+    }
     .why-card:hover {
       transform: none;
       background: transparent;
@@ -867,13 +881,18 @@
       stroke: currentColor;
     }
     .why-card h3 {
-      font-size: 16px;
+      font-size: 1.17rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 8px;
     }
+    .why-card-1 p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
     .why-card p {
-      font-size: 16px;
+      font-size: 1rem;
       color: var(--text-body);
       line-height: 1.6;
     }
@@ -1556,13 +1575,23 @@
       .cta-buttons .btn { width: 100%; }
       .team-photo { height: 250px; }
       .about-image { height: 350px; }
-      .why-showcase-image { height: 300px; }
+      .why-showcase-image { height: 500px; }
+      .academy-header {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 4rem;
+            align-items: center;
+            justify-content:center;
+        }
+        .academy-section{
+          padding:40px 3px;
+        }
     }
 
     @media (max-width: 480px) {
       .section { padding: 40px 0; }
       .section-title { font-size: 24px; }
-      .hero-title { font-size: 28px; }
+      .hero-title { font-size: 40px; }
       .hero-desc { font-size: 16px; }
       .rating-badge { display: none; }
       .about-features { grid-template-columns: 1fr; }
@@ -1571,6 +1600,39 @@
       .testi-card { flex: 0 0 100%; }
       .carousel-prev,
       .carousel-next { width: 40px; height: 40px; font-size: 16px; }
+      .why-card-1{
+        margin-left:0px;
+      }
+      .why-grid{
+        gap:0px;
+      }
+      .academy-header {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 4rem;
+            align-items: center;
+            justify-content:center;
+        }
+        .academy-section{
+          padding:40px 3px;
+        }
+              .navbar-logo-icon { 
+      width: 150px;
+      height: 100%;
+    }
+    .hero-checks{
+      display:contents;
+    }
+    .about-cta{
+      display:grid;
+      justify-content:center;
+      padding-top:10px;
+      padding-bottom:0px;
+    }
+    #about{
+      margin:0;
+      padding:0px;
+    }
     }
 
     /* ===== GOOGLE REVIEWS SECTION ===== */
@@ -1842,27 +1904,33 @@
       flex: 0 0 100%;
     }
  
+    .google-reviews-container {
+      position: relative;
+      margin-bottom: 80px;
+    }
+
     .carousel-prev,
     .carousel-next {
-      position: static;
+      position: absolute;
+      top:105%;
       transform: none !important;
       width: 40px;
       height: 40px;
       font-size: 16px;
-      margin-top: 24px;
+      left: 50%;
     }
  
     .carousel-prev {
-      margin-right: 12px;
+      margin-left: -90px;
     }
  
     .carousel-next {
-      margin-left: 12px;
+      margin-left: 50px;
     }
  
     .reviews-carousel-wrapper {
       position: relative;
-      margin-bottom: 60px;
+      margin-bottom: 0;
     }
  
     .google-logo-badge {
@@ -2065,7 +2133,7 @@
               <p>Skilled dentists delivering precise, effective treatments with proven expertise.</p>
             </div>
           </div>
-          <div class="why-card" style="margin-left:50px;">
+          <div class="why-card-1" >
             <div class="why-icon"><i class="fa-solid fa-microscope"></i></div>
             <div>
               <h3>Advanced Technology</h3>
@@ -2079,7 +2147,7 @@
               <p>Safe, clean, and stress-free environment for a comfortable dental experience.</p>
             </div>
           </div>
-          <div class="why-card" style="margin-left:50px;">
+          <div class="why-card-1" >
             <div class="why-icon"><i class="fa-solid fa-heart"></i></div>
             <div>
               <h3>Highly Rated by Patients</h3>
@@ -2093,7 +2161,7 @@
         <div class="why-showcase-image" style="background-image: url('./Assets/img/Nrk\ Interior.png');">
           <div class="why-image-overlay"></div>
           <div class="satisfaction-badge">
-            <span class="percent">98%</span>
+            <span class="percent">99%</span>
             <span class="label">Patient Satisfaction</span>
           </div>
           
@@ -2119,7 +2187,7 @@
                         WHAT WE OFFER
                       </div>
                     </div>
-                    <h2>Complete Dental Care <br><span class="text-gradient-purple">In Salem</span></h2>
+                    <h2 >Complete Dental Care <br><span class="text-gradient-purple">In Salem</span></h2>
                 </div>
                 <div>
                     <p class="academy-description">We offer comprehensive dental services in Salem, from preventive care to advanced treatments for complete oral health.</p>
@@ -2240,7 +2308,7 @@
         </div>
       </article>
 
-      <article class="team-card" style="background-image:url(./Assets/img/Dr.Ranjith.JPG)">
+      <!-- <article class="team-card" style="background-image:url(./Assets/img/Dr.Ranjith.JPG)">
         <div class="team-image-overlay"></div>
         <div class="team-experience">12+ Years</div>
         <div class="team-body">
@@ -2252,7 +2320,7 @@
             <a href="#" class="team-social-icon" title="Phone">📞</a>
           </div>
         </div>
-      </article>
+      </article> -->
     </div>
   </div>
 </section>
@@ -2402,7 +2470,7 @@ Keep going sir👍"</p>
         <h2 class="cta-title">Fix Your Smile, Stop the Pain </br><span class="highlight">Book Your Appointment Today</span></h2>
         <p class="cta-desc">Book your free consultation today. No obligation, no pressure — just honest advice from a team that genuinely cares.</p>
         <div class="cta-buttons text-center">
-          <a href="appointment" class="btn btn-white" style="margin-right:20px;font-weight:500">Book Appointment Now</a>
+          <a href="appointment" class="btn btn-white" style="margin-right:20px;font-weight:500;margin-bottom:10px;">Book Appointment Now</a>
           <a href="tel:+918248203459" class="btn btn-outline" style="border-color: white; color: white; font-weight:500">Call For Instant Consultation</a>
         </div>
       </div>
