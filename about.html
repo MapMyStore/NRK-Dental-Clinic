@@ -645,7 +645,7 @@
 
     .journey-inner h2{
      
-      font-size: clamp(35px, 6vw, 55px);
+      font-size: clamp(35px, 6vw, 50px);
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 20px;
@@ -834,7 +834,7 @@
     .footer-logo { display: flex; align-items: center; gap: 0px; font-size: 20px; font-weight: 800; color: white; margin-bottom: 16px; }
     .footer-logo-icon { width: 42px; height: 42px;  border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 800; }
     .footer-logo-icon img {width:100%;height:100%}
-    .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 220px; }
+    .footer-brand p { font-size: 15px; line-height: 1.7; max-width: 250px; }
     .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; }
     .footer-col ul li { margin-bottom: 10px; }
     .footer-col ul li a { font-size: 14px; transition: color .2s; }
@@ -844,7 +844,7 @@
     .footer-hours { margin-top: 16px; }
     .footer-hours h5 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 8px; }
     .footer-hours p { font-size: 13px; margin-bottom: 4px; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom {  justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
     .footer-bottom p { font-size: 13px; }
     .footer-legal { display: flex; gap: 20px; }
     .footer-legal a { font-size: 13px; }
@@ -1047,6 +1047,7 @@
         /* IMAGE SECTION */
         .image-section {
             position: relative;
+            width:600px;
         }
  
         .doctor-image {
@@ -1198,9 +1199,9 @@
         }
  
         .specialization-tag:hover {
-            background: var(--primary-color);
+            background: var(--primary);
             color: white;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
         }
  
         /* ACHIEVEMENTS */
@@ -1257,7 +1258,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            width: 40%;
+            width: 300px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1535,7 +1536,7 @@
       padding: 24px;
       border-radius: var(--radius-lg);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      border-left: 4px solid var(--primary);
+      
       max-width: 500px;
       z-index: 20;
       backdrop-filter: blur(20px);
@@ -1748,6 +1749,27 @@
     }
 
     /* ===== RESPONSIVE ===== */
+    @media(max-width:1024px){
+      .profile-wrapper{
+        grid-template-columns:1fr;
+        padding: 30px 20px;
+        gap: 30px;
+      }
+      .image-section {
+        width: 100%;
+        max-width: 100%;
+      }
+      .info-section {
+        gap: 16px;
+      }
+      .doctor-name {
+        font-size: 28px;
+      }
+      .qualification-block,
+      .designation-block {
+        gap: 12px;
+      }
+    }
     @media (max-width: 768px) {
       .section { padding: 60px 0; }
       #about-hero { padding: 60px 0 40px; }
@@ -1771,6 +1793,39 @@
       .founder-inner { grid-template-columns: 1fr; gap: 40px; }
       .founder-content h2 { font-size: 24px; }
       .founder-quote { font-size: 15px; }
+
+      .profile-wrapper {
+        padding: 20px 16px;
+        gap: 20px;
+      }
+      .image-section {
+        width: 100%;
+      }
+      .info-section {
+        gap: 12px;
+        padding: 0;
+      }
+      .doctor-name {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .qualification-block,
+      .designation-block {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 13px;
+      }
+      .block-label {
+        font-size: 11px !important;
+      }
+      .qualification-title,
+      .designation-title {
+        font-size: 14px !important;
+      }
+      .doctor-bio {
+        font-size: 13px !important;
+        line-height: 1.5;
+      }
 
       #cta { padding: 60px 24px; }
       #cta h2 { font-size: 28px; }
@@ -1806,6 +1861,36 @@
       .mission-icon { width: 42px; height: 42px; font-size: 18px; }
       .mission-card h3 { font-size: 26px; }
       .mission-card p { font-size: 13px; }
+
+      .profile-wrapper {
+        padding: 16px 12px;
+        gap: 16px;
+      }
+      .image-section {
+        width: 100%;
+      }
+      .info-section {
+        gap: 10px;
+      }
+      .doctor-name {
+        font-size: 18px;
+      }
+      .qualification-block,
+      .designation-block {
+        gap: 8px;
+        font-size: 12px;
+      }
+      .block-label {
+        font-size: 10px !important;
+      }
+      .qualification-title,
+      .designation-title {
+        font-size: 12px !important;
+      }
+      .doctor-bio {
+        font-size: 12px !important;
+        line-height: 1.4;
+      }
 
       .founder-quote { padding-left: 16px; font-size: 14px; }
 
@@ -1886,15 +1971,14 @@
       <div class="why-image-section">
         <div class="why-showcase-image" style="background-image: url('./Assets/img/Nrk\ Interior.png');">
           <div class="why-image-overlay"></div>
-          <div class="satisfaction-badge">
+          <!-- <div class="satisfaction-badge">
             <span class="percent">10+</span>
             <span class="label">Years of Expertise </span>
-          </div>
+          </div> -->
           
           <div class="why-image-quote">
-            <span class="promise-label">--Our Promise--</span>
-            <p class="text-center">"Providing advanced dental treatments in Salem with trusted care, comfort, and lasting results."</p>
-            
+            <span class="promise-label">--Our Commitment--</span>
+<p class="text-center">"Every visit guided by care, every treatment delivered with precision."</p>
           </div>
         </div>
       </div>
@@ -1946,17 +2030,18 @@
     <div class="journey-inner text-center">
       <div class="journey-content">
         <span class="section-label" style="color:whitesmoke; font-weight:400;">Our Journey</span>
-        <h2 style=" margin: 15px 0px; color:white;margin-bottom:50px;">Salem’s Trusted Destination for <span style="color:rgba(255, 242, 0, 0.82); font-style:italic">Complete Dental Care</span></h2>
+        <h2 style=" margin: 15px 0px; color:white;margin-bottom:50px;">Transforming Smiles Across Salem with </br> <span style="color:rgba(255, 242, 0, 0.82); font-style:italic">Trust & Exceptional Care</span></h2>
         
         <p class="journey-text">
-         NRK Multispeciality Dental Care was established with a vision to provide high-quality, comprehensive dental care in Salem. From the beginning, our focus has been to create a clinic where patients feel comfortable, confident, and well cared for at every stage of their treatment.
-        </p>
+        NRK Multispeciality Dental Care was founded by Dr. Ranjith Kumar M and Dr. Nithya Bakialakshmi K with a shared vision to bring advanced, ethical, and patient-focused dental care to Salem. Their goal was to create a modern clinic where patients feel comfortable, confident, and well cared for at every stage of treatment.
+       </p>
         
         <p class="journey-text">
-          Over the years, we have grown into a trusted name in dental healthcare, offering a wide range of services—from preventive and cosmetic dentistry to advanced treatments like dental implants and laser procedures. Our modern technology enables precise, efficient, and minimally invasive care.
-        What sets us apart is our patient-first approach. We prioritize painless treatments, clear communication, and a friendly environment to ensure every patient feels at ease.
-        </p>
-        <p class="journey-text">Today, we continue to serve the Salem community with dedication, focusing on transforming smiles and improving lives through better oral health.</p>
+         Led by the expertise of Dr. Ranjith Kumar M, an accomplished Oral & Maxillofacial Surgeon, the clinic offers advanced care in dental implants, wisdom tooth removal, facial trauma management, TMJ disorders, orthognathic surgery, facial aesthetics, and complex oral surgical procedures. Alongside him, Dr. Nithya Bakialakshmi K, a skilled Periodontist and Oral Implantologist, provides specialized treatments in gum health, laser periodontal therapy, gum grafting, bone regeneration, smile designing, crown lengthening, and implant dentistry.
+        
+        Over the years, NRK Multispeciality Dental Care has grown into a trusted name in Salem by combining specialist expertise with compassionate care. From preventive dentistry and cosmetic smile enhancement to advanced surgical and restorative treatments, every service is delivered with precision, hygiene, and patient comfort in mind.
+      </p>
+        <p class="journey-text">Today, NRK Multispeciality Dental Care continue to serve the Salem community with dedication, focusing on transforming smiles and improving lives through better oral health.</p>
 
         <div class="journey-stats">
           <div class="stat-item fade-in-up">
@@ -1968,8 +2053,8 @@
             <div class="stat-label">Patients Treated</div>
           </div>
           <div class="stat-item fade-in-up">
-            <div class="stat-number">99%</div>
-            <div class="stat-label">Satisfaction Rate</div>
+            <div class="stat-number">5<i class="fa-solid fa-star"></i></div>
+            <div class="stat-label">Google Rated</div>
           </div>
         </div>
       </div>
@@ -2001,7 +2086,7 @@
               </div>
               <h3>Our Mission</h3>
             </div>
-            <p>To provide world-class, patient-centered dental care through advanced technology, skilled expertise, and compassionate service — delivering safe, painless, and personalized treatments in a comfortable environment for every patient in Salem.</p>
+            <p>To provide world-class, patient-centered dental care through advanced technology, skilled expertise, and compassionate service delivering safe, painless, and personalized treatments in a comfortable environment for every patient in Salem.</p>
           </div>
         </div>
 
@@ -2017,7 +2102,7 @@
               </div>
               <h3>Our Vision</h3>
             </div>
-            <p>To be recognized as the most trusted and progressive dental clinic in Salem — setting the benchmark for clinical excellence, innovation, ethical care, and life-changing smile transformations for generations to come.</p>
+            <p>To be recognized as the most trusted and progressive dental clinic in Salem setting the benchmark for clinical excellence, innovation, ethical care, and life-changing smile transformations for generations to come.</p>
           </div>
         </div>
 
@@ -2368,7 +2453,7 @@ Her expertise includes laser gum therapy, flap surgeries, gum grafting, bone reg
       <div class="footer-brand text-center">
         <div class="footer-logo text-center">
           <div class="navbar-logo">
-          <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.png"></div>
+          <div class="navbar-logo-icon"><img src="./Assets/nrk white logo.png"></div>
           
         </div>
           
@@ -2379,24 +2464,24 @@ Her expertise includes laser gum therapy, flap surgeries, gum grafting, bone reg
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#team">Our Team</a></li>
-          <li><a href="index.html#testimonials">Gallery</a></li>
-          <li><a href="index.html#footer">Contact</a></li>
+          <li><a href="/index">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="#dental-services">Services</a></li>
+          <li><a href="about#team">Our Team</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="appointment">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="index.html#services">General Dentistry</a></li>
-          <li><a href="index.html#services">Cosmetic Dentistry</a></li>
-          <li><a href="index.html#services">Orthodontics</a></li>
-          <li><a href="index.html#services">Dental Implants</a></li>
-          <li><a href="index.html#services">Teeth Whitening</a></li>
-          <li><a href="index.html#services">Root Canal</a></li>
+          <li><a href="dental-services">General Dentistry</a></li>
+          <li><a href="dental-services">Cosmetic Dentistry</a></li>
+          <li><a href="dental-services">Orthodontics</a></li>
+          <li><a href="dental-services">Dental Implants</a></li>
+          <li><a href="dental-services">Teeth Whitening</a></li>
+          <li><a href="dental-services">Root Canal</a></li>
         </ul>
       </div>
 
@@ -2416,7 +2501,7 @@ Her expertise includes laser gum therapy, flap surgeries, gum grafting, bone reg
         </p>
         <p>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@dentcare.com" itemprop="email" style="color:inherit;">info@dentcare.com</a>
+          <a href="mailto:nrkmultispeciality@gmail.com" itemprop="email" style="color:inherit;">nrkmultispeciality@gmail.com</a>
         </p>
         <div class="footer-hours">
           <h5>Business Hours</h5>
@@ -2426,12 +2511,9 @@ Her expertise includes laser gum therapy, flap surgeries, gum grafting, bone reg
       </div>
     </div>
 
-    <div class="footer-bottom" style="color:#6b7280">
+    <div class="footer-bottom text-center" style="color:#6b7280">
       <p>© <span id="year"></span> NRK Multispeciality Dental Care. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
+      
     </div>
   </div>
 </footer>

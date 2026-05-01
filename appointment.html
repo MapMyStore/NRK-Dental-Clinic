@@ -653,7 +653,7 @@
           </div>
           <div class="contact-detail">
             <h4>Email</h4>
-            <p><a href="mailto:info@dentcare.com">info@dentcare.com</a></p>
+            <p><a href="mailto:nrkmultispeciality@gmail.com">nrkmultispeciality@gmail.com</a></p>
           </div>
         </div>
 
@@ -686,17 +686,21 @@
           <input type="text" id="patientName" name="patientName" placeholder="Your full name" required>
         </div>
 
-        <!-- Contact Number & City -->
+        <!-- Email & Contact Number -->
         <div class="form-row">
+          
           <div class="form-group">
             <label for="contactNumber">Contact Number <span class="required">*</span></label>
             <input type="tel" id="contactNumber" name="contactNumber" placeholder="+91 " required>
           </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" placeholder="Your city">
-          </div>
+          <!-- City -->
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="Your city">
         </div>
+        </div>
+
+        
 
         <!-- Preferred Date -->
         <div class="form-group">
@@ -751,7 +755,7 @@
       </svg>
     </div>
     <h2>Appointment Booked!</h2>
-    <p>Your appointment has been successfully scheduled. We'll send you a confirmation shortly.</p>
+    <p>Your appointment has been successfully scheduled.</p>
     <div class="modal-details">
       <div class="modal-detail-row">
         <span class="modal-detail-label">Date:</span>
@@ -776,7 +780,7 @@
     <div class="footer-inner">
       <div class="footer-brand text-center">
         <div class="footer-logo text-center">
-           <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.svg"></div>
+           <div class="navbar-logo-icon"><img src="./Assets/nrk white logo.png"></div>
         </div>
         <p class="text-center" style = "font-size:12px; font-weight:300"itemprop="description">Providing exceptional dental care in Salem with modern technology and a compassionate approach.</br> Your smile is our priority.</p>
       </div>
@@ -784,27 +788,26 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#testimonials">Gallery</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="/index">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="#dental-services">Services</a></li>
+          <li><a href="about#team">Our Team</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="appointment">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">General Dentistry</a></li>
-          <li><a href="#services">Cosmetic Dentistry</a></li>
-          <li><a href="#services">Orthodontics</a></li>
-          <li><a href="#services">Dental Implants</a></li>
-          <li><a href="#services">Teeth Whitening</a></li>
-          <li><a href="#services">Root Canal</a></li>
+          <li><a href="dental-services">General Dentistry</a></li>
+          <li><a href="dental-services">Cosmetic Dentistry</a></li>
+          <li><a href="dental-services">Orthodontics</a></li>
+          <li><a href="dental-services">Dental Implants</a></li>
+          <li><a href="dental-services">Teeth Whitening</a></li>
+          <li><a href="dental-services">Root Canal</a></li>
         </ul>
       </div>
-
       <div class="footer-contact">
         <h4>Contact Us</h4>
         <p>
@@ -821,7 +824,7 @@
         </p>
         <p>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@dentcare.com" itemprop="email" style="color:inherit;">info@dentcare.com</a>
+          <a href="mailto:nrkmultispeciality@gmail.com" itemprop="email" style="color:inherit;">nrkmultispeciality@gmail.com</a>
         </p>
         <div class="footer-hours">
           <h5>Business Hours</h5>
@@ -947,7 +950,7 @@
 
   // ===== FORM SUBMISSION =====
   const appointmentForm = document.getElementById('appointmentForm');
-  appointmentForm.addEventListener('submit', (e) => {
+  appointmentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Validate time selection
@@ -964,7 +967,8 @@
       date: dateInput.value,
       time: selectedTimeInput.value,
       service: document.getElementById('service').value,
-      concern: document.getElementById('concern').value
+      concern: document.getElementById('concern').value,
+      bookingTime: new Date().toLocaleString()
     };
 
     // Format date for display
@@ -983,11 +987,40 @@
 
     showModal();
 
+    // Send data to Google Sheet and Email
+    try {
+      await sendToGoogleSheet(formData);
+    } catch (error) {
+      console.error('Error saving appointment:', error);
+    }
+
     // Reset form
     appointmentForm.reset();
     timeSlotContainer.innerHTML = '';
     selectedTimeInput.value = '';
   });
+
+  // Function to send data to Google Sheets
+  async function sendToGoogleSheet(data) {
+    // Replace with your Google Apps Script deployment URL
+    const scriptURL = 'https://script.google.com/a/macros/mapmystore.com/s/AKfycbx7Zg3nfLrBGjp5xlhmYbUG9EfHCGti5qqGM3cfRXMDrERWbcPQ5saDuDo2-y76QTDt/exec';
+    
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(data)
+      });
+      
+      if (response.ok) {
+        console.log('Appointment saved successfully');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
 
   // Modal functions
   function showModal() {

@@ -887,7 +887,7 @@
       margin-bottom: 8px;
     }
     .why-card-1 p {
-      font-size: 1rem;
+      font-size: .9 rem;
       color: var(--text-body);
       line-height: 1.6;
     }
@@ -983,7 +983,7 @@
       padding: 24px;
       border-radius: var(--radius-lg);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      border-left: 4px solid var(--primary);
+      
       max-width: 500px;
       z-index: 20;
       backdrop-filter: blur(20px);
@@ -1101,9 +1101,11 @@
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      grid-template-columns:1fr 1fr;
+      gap: 70px;
       margin-bottom: 40px;
+      margin-right:150px;
+      margin-left:150px;
     }
     .team-card {
       background-size: cover;
@@ -1386,13 +1388,14 @@
       margin-bottom: 12px;
     }
     .cta-title {
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(28px, 4vw, 34px);
       font-weight: 900;
       line-height: 1.1;
       margin-bottom: 16px;
       margin-top:10px;
     }
     .cta-title .highlight {
+      font-size: clamp(28px, 4vw, 44px);
       color: #FFD700;
     }
     .cta-desc {
@@ -1468,6 +1471,9 @@
       border-bottom: 1px solid rgba(255,255,255,0.1);
       margin-bottom: 40px;
     }
+    .footer-brand{
+      max-width: 250px; 
+    }
     .footer-brand p {
       font-size: 14px;
       line-height: 1.7;
@@ -1517,7 +1523,7 @@
       margin-bottom: 6px;
     }
     .footer-bottom {
-      display: flex;
+      
       justify-content: space-between;
       align-items: center;
       padding: 24px 0;
@@ -1542,7 +1548,7 @@
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .service-card.featured { grid-row: auto; }
       .why-wrapper { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: repeat(2, 1fr);margin-left:0px;margin-right:0px;}
       .testi-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-inner { grid-template-columns: 1fr 1fr; }
       .cta-inner { grid-template-columns: 1fr; }
@@ -1566,7 +1572,7 @@
       .services-grid { grid-template-columns: 1fr; }
       .why-wrapper { grid-template-columns: 1fr; gap: 32px; }
       .why-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; margin-left:0px; margin-right:0px;}
       .testi-carousel { padding: 0 50px; }
       .testi-card { flex: 0 0 calc(50% - 12px); }
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -1600,6 +1606,11 @@
       .testi-card { flex: 0 0 100%; }
       .carousel-prev,
       .carousel-next { width: 40px; height: 40px; font-size: 16px; }
+      .why-image-quote {
+        right:0px;
+        margin-left:10px;
+        margin-right:10px;
+      }
       .why-card-1{
         margin-left:0px;
       }
@@ -1632,7 +1643,9 @@
     #about{
       margin:0;
       padding:0px;
+      padding-top:40px;
     }
+    
     }
 
     /* ===== GOOGLE REVIEWS SECTION ===== */
@@ -1675,6 +1688,14 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-height: 320px;
+    max-height: 400px;
+    overflow: hidden;
+  }
+
+  .review-card.expanded {
+    max-height: none;
+    overflow: visible;
   }
  
   .review-card:hover {
@@ -1765,6 +1786,37 @@
     margin: 0;
     font-style: italic;
     flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .review-card.expanded .review-text {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  /* View More Button */
+  .review-toggle-btn {
+    align-self: flex-start;
+    background:transparent;
+    color: rgba(27, 24, 24, 0.46);
+    border: none;
+    
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .review-toggle-btn:hover {
+    color: black;
+  }
+
+  .review-card.expanded .review-toggle-btn {
+    margin-top: 12px;
   }
  
   /* Review Footer */
@@ -2005,7 +2057,7 @@
     <div class="hero-inner">
       <div class="hero-badges">
         <div class="hero-badge">
-          <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-2.77 3.058 3.058 0 00-3.064 3.067 3.066 3.066 0 003.319 3.073 3.066 3.066 0 001.414-5.37zm10.289 12.206a.75.75 0 00-.364-1.44 12.509 12.509 0 01-4.684-1.455.75.75 0 00-.464.898c.456 1.389.912 2.568 1.34 3.737.42 1.142.704 1.829.379 2.121-.325.292-1.059-.216-2.4-1.115-.772-.52-1.846-1.26-2.434-1.901-.588.64-1.662 1.38-2.435 1.902-1.34.899-2.075 1.406-2.4 1.114-.325-.292-.041-.979.379-2.121.428-1.169.884-2.348 1.34-3.737a.75.75 0 00-.464-.898 12.509 12.509 0 01-4.684 1.455.75.75 0 00-.364 1.44c1.925.807 3.720 1.976 5.146 3.4C6.257 18.886 7.577 20 10 20s3.743-1.114 5.146-3.4c1.426-1.424 3.22-2.593 5.146-3.4z" clip-rule="evenodd"/></svg>
+          <i class="fa-solid fa-hand-holding-medical"></i>
           Your Trusted Dental Partner
         </div>
       </div>
@@ -2046,9 +2098,9 @@
       </div>
 
       <div class="hero-checks" aria-label="Key features">
-        <div class="hero-check"><i class="fa-regular fa-circle-check" style = "color: #d4c4f0"></i>Same-Day Appointments</div>
+        <div class="hero-check"><i class="fa-regular fa-circle-check" style = "color: #d4c4f0"></i>Specialist Dentists</div>
         <div class="hero-check"><i class="fa-regular fa-circle-check" style = "color: #d4c4f0"></i>10+ Years of Expertise</div>
-        <div class="hero-check"><i class="fa-regular fa-circle-check" style = "color: #d4c4f0"></i>Advanced Technology</div>
+        <div class="hero-check"><i class="fa-regular fa-circle-check" style = "color: #d4c4f0"></i>Patient-First Care</div>
       </div>
     </div>
   </div>
@@ -2062,7 +2114,7 @@
         <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #7c3aed 0%, #6B46E0 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
           <img src="./Assets/img/Treatment services.png">
         </div>
-        <div class="about-image-overlay">15+ Years of Experience</div>
+        <div class="about-image-overlay">10+ Years of Experience</div>
              
       </div>
 
@@ -2077,26 +2129,26 @@
          <div class="about-features">
           <div class="feature">
             <div class="feature-icon">✓</div>
-            <div class="feature-text">Personalized treatment plans for every patient</div>
+            <div class="feature-text">Led by Experienced multispeciality doctors</div>
           </div>
           <div class="feature">
             <div class="feature-icon">✓</div>
-            <div class="feature-text">Advanced digital X-ray & 3D imaging</div>
+            <div class="feature-text">Modern facilities for comfortable dental care</div>
           </div>
           <div class="feature">
             <div class="feature-icon">✓</div>
-            <div class="feature-text">Sedation dentistry for anxious patients</div>
+            <div class="feature-text">Safe and hygienic environment</div>
           </div>
           <div class="feature">
             <div class="feature-icon">✓</div>
-            <div class="feature-text">Transparent pricing — no surprise fees</div>
+            <div class="feature-text">Trusted by 5K+ Salem families</div>
           </div>
         </div>
   
 
         <div class="about-cta">
           <a href="./about" class="btn btn-primary">Discover Our Story</a>
-          <a href="#" style="display: flex; align-items: center; gap: 0; text-decoration: none; color: var(--text-dark);">
+          <a href="#team" style="display: flex; align-items: center; gap: 0; text-decoration: none; color: var(--text-dark);">
             <div class="doctor-avatar"><img src="./Assets/img/DR Cta thumbnail.png"></div>
             <div class="doctor-info">
               <div class="doctor-name">Dr. Ranjith Kumar</div>
@@ -2119,7 +2171,7 @@
         
         <div class="hero-badges-1">
         <div class="hero-badge-1">
-          <i class="fa-solid fa-hand-holding-medical" style="font-size:17px;margin-right:5px;"></i> WHY NRK DENTAL
+          <i  class="fa-regular fa-lightbulb" style="font-size:17px;margin-right:5px;"></i> WHY NRK DENTAL
         </div>
       </div>
      
@@ -2136,12 +2188,12 @@
           <div class="why-card-1" >
             <div class="why-icon"><i class="fa-solid fa-microscope"></i></div>
             <div>
-              <h3>Advanced Technology</h3>
-              <p>Cutting-edge dental technology including digital diagnosticsfor precise, painless and efficient dental care.</p>
+              <h3>Modern Dental Setup</h3>
+              <p>Well-equipped clinic environment designed to provide comfortable, safe, and high-quality dental care for every patient.</p>
             </div>
           </div>
           <div class="why-card">
-            <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="why-icon"><i class="fa-solid fa-house-medical-circle-check"></i></i></div>
             <div>
               <h3>Hygienic Environment</h3>
               <p>Safe, clean, and stress-free environment for a comfortable dental experience.</p>
@@ -2161,8 +2213,8 @@
         <div class="why-showcase-image" style="background-image: url('./Assets/img/Nrk\ Interior.png');">
           <div class="why-image-overlay"></div>
           <div class="satisfaction-badge">
-            <span class="percent">99%</span>
-            <span class="label">Patient Satisfaction</span>
+            <span class="percent" style="font-size:30px;">5 <i class="fa-solid fa-star" ></i></span>
+            <span class="label">Google Rated Clinic</span>
           </div>
           
           <div class="why-image-quote">
@@ -2266,7 +2318,7 @@
 
 <!-- ===== TEAM SECTION ===== -->
 <section id="team">
-  <div class="container">
+  <div class="container" >
     <div class="team-intro">
       <div class="hero-badges-2">
                       <div class="hero-badge-1">
@@ -2275,17 +2327,17 @@
                     </div>
       <h2 class="section-title">The Faces Behind Your <span class="text-gradient-purple">Best Smile</span></h2>
     </div>
+    
 
     <div class="team-grid">
       <article class="team-card" style="background-image:url(./Assets/img/Dr.Ranjith.JPG)">
         <div class="team-image-overlay"></div>
-        <div class="team-experience">15+ Years</div>
+  
         <div class="team-body">
-          <p class="team-role">Lead Dentist & Founder</p>
+          <p class="team-role">Founder & Maxillofacial Surgeon</p>
           <h3 class="team-name">Dr. Ranjith Kumar</h3>
-          
-          <p class="team-specialty">Specialist in implants and cosmetic dentistry with 15+ years of experience.</p>
-          <div class="team-socials">
+
+          <p class="team-specialty">Expert in dental implants, wisdom tooth removal, facial surgery, TMJ care, and advanced oral procedures.</p><div class="team-socials">
             <!-- <a href="#" class="team-social-icon" title="LinkedIn">in</a>
             <a href="#" class="team-social-icon" title="Phone">📞</a> -->
             <a href="about#team" style="color:rgba(255, 255, 255, 0.695)">View Profile →</a>
@@ -2295,12 +2347,12 @@
 
       <article class="team-card" style="background-image:url(./Assets/img/Dr.Nithya.JPG)">
         <div class="team-image-overlay"></div>
-        <div class="team-experience">10+ Years</div>
+        
         <div class="team-body">
-          <p class="team-role">Orthodontist</p>
+          <p class="team-role">Periodontist & Oral Implantologist</p>
           <h3 class="team-name">Dr. Nithya</h3>
-          
-          <p class="team-specialty">Expert in braces and clear aligners for perfect smile alignment.</p>
+
+          <p class="team-specialty">Expert in gum treatments, dental implants, laser periodontal care, and smile enhancing procedures.</p>
           <div class="team-socials">
             
             <a href="about#team" style="color:rgba(255, 255, 255, 0.695)">View Profile →</a>
@@ -2362,6 +2414,7 @@
             
             <p class="review-text">"I had a great experience at NRK MULTISPECIALITY DENTAL CARE. The clinic was very clean and well-organized. Dr. Ranjith was patient and explained everything clearly before starting the treatment. Highly recommend this place if you're looking for quality dental care."</p>
             
+            <button class="review-toggle-btn">View More</button>
             
           </div>
  
@@ -2384,6 +2437,8 @@
             
             <p class="review-text">"I had a fantastic experience at NKR Multi Speciality Dental Care. Dr. Ranjith Kumar is an excellent dentist. He's very skilled and made sure I was comfortable throughout my entire appointment. I highly recommend him and this clinic!"</p>
             
+            <button class="review-toggle-btn">View More</button>
+            
             
           </div>
  
@@ -2405,6 +2460,8 @@
             <div class="review-stars">★★★★★</div>
             
             <p class="review-text">"I visited this dental clinic after having a traumatic experience with past dental treatments, and I was honestly very nervous. The doctors and staff treated me with so much care and patience, which made a huge difference. The entire treatment was handled professionally, and everyone was kind and reassuring throughout. Overall, my experience was very positive, and the treatment was really good. Thankyou Dr. Ranjith Sir and Dr. Nithya mam for your patience and care."</p>
+            
+            <button class="review-toggle-btn">View More</button>
             
           </div>
  
@@ -2429,6 +2486,8 @@
 My dad treated with permanent denture fixation without any issues.. your patience and friendly nature made us more comfortable to discuss and treat further . Good patient care..
 Keep going sir👍"</p>
             
+            <button class="review-toggle-btn">View More</button>
+            
           </div>
  
           <!-- Review 5 -->
@@ -2450,9 +2509,102 @@ Keep going sir👍"</p>
             
             <p class="review-text">"The clinic is very clean and well-maintained. Dr.Ranjith sir took time to explain the procedure and made me feel comfortable throughout. The staff was polite and efficient. Overall, a very professional and satisfying experience"</p>
             
+            <button class="review-toggle-btn">View More</button>
             
           </div>
- 
+
+          <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-user">
+                <div class="user-avatar">BV</div>
+                <div class="user-info">
+                  <p class="user-name">Bala Vignesh</p>
+                  <p class="review-time">5 Days ago</p>
+                </div>
+              </div>
+              <div class="google-logo-badge">
+                <img src="./Assets/img/icons/Google Icon.png">
+              </div>
+            </div>
+            
+            <div class="review-stars">★★★★★</div>
+            
+            <p class="review-text">"I was terrified of the dentist, but they made my treatment completely painless.
+The staff is warm and caring, making me feel comfortable and at ease throughout the entire visit"</p>
+            
+            <button class="review-toggle-btn">View More</button>
+            
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-user">
+                <div class="user-avatar">KB</div>
+                <div class="user-info">
+                  <p class="user-name">Karthikeyan BT</p>
+                  <p class="review-time">A month ago</p>
+                </div>
+              </div>
+              <div class="google-logo-badge">
+                <img src="./Assets/img/icons/Google Icon.png">
+              </div>
+            </div>
+            
+            <div class="review-stars">★★★★★</div>
+            
+            <p class="review-text">"Had a great experience removing my wisdom tooth. The doctor made me feel comfortable throughout the treatment.
+Good care, neat clinic, and supportive staff. Thank you for the safe treatment.
+Much recommended 🙌🏻"</p>
+            
+            <button class="review-toggle-btn">View More</button>
+            
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-user">
+                <div class="user-avatar">VK</div>
+                <div class="user-info">
+                  <p class="user-name">Venki Karthick</p>
+                  <p class="review-time">2 months ago</p>
+                </div>
+              </div>
+              <div class="google-logo-badge">
+                <img src="./Assets/img/icons/Google Icon.png">
+              </div>
+            </div>
+            
+            <div class="review-stars">★★★★★</div>
+            
+            <p class="review-text">"I am very satisfied with the treatment provided for my mandible fracture. Dr. Ranjith Kumar was professional, attentive, and supportive at every stage of my recovery."</p>
+            
+            
+          </div>
+
+           <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-user">
+                <div class="user-avatar">V</div>
+                <div class="user-info">
+                  <p class="user-name">Vishnu</p>
+                  <p class="review-time">2 months ago</p>
+                </div>
+              </div>
+              <div class="google-logo-badge">
+                <img src="./Assets/img/icons/Google Icon.png">
+              </div>
+            </div>
+            
+            <div class="review-stars">★★★★★</div>
+            
+            <p class="review-text">"I hade a great experience at the clinic. The doctor was patient and answered all my questions. Treatment was professional. Reasonable pricing and high-quality service. The clinic is well maintained and appointments are handled on time."</p>
+            
+            
+          </div>
         </div>
       </div>
  
@@ -2467,8 +2619,8 @@ Keep going sir👍"</p>
     <div class="cta-inner">
     <div class="cta-content text-center">
         
-        <h2 class="cta-title">Fix Your Smile, Stop the Pain </br><span class="highlight">Book Your Appointment Today</span></h2>
-        <p class="cta-desc">Book your free consultation today. No obligation, no pressure — just honest advice from a team that genuinely cares.</p>
+        <h2 class="cta-title"> Stop the Pain,Fix Your Smile</br><span class="highlight">Book Your Appointment Today</span></h2>
+        <p class="cta-desc">Book your consultation today. Get treated from a team that genuinely cares.</p>
         <div class="cta-buttons text-center">
           <a href="appointment" class="btn btn-white" style="margin-right:20px;font-weight:500;margin-bottom:10px;">Book Appointment Now</a>
           <a href="tel:+918248203459" class="btn btn-outline" style="border-color: white; color: white; font-weight:500">Call For Instant Consultation</a>
@@ -2486,37 +2638,41 @@ Keep going sir👍"</p>
 <footer id="footer" role="contentinfo">
   <div class="container-footer" >
     <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="navbar-logo">
-          <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.png"></div>
+      <div class="footer-brand text-center">
+        <div class="navbar-logo text-center">
+          <div class="navbar-logo-icon"><img src="./Assets/nrk white logo.png"></div>
           
         </div>
-        <p>Providing exceptional dental care in Salem with modern technology and a compassionate approach. Your smile is our priority.</p>
+        <p class="text-center">Providing exceptional dental care in Salem with modern technology and a compassionate approach. Your smile is our priority.</p>
       </div>
 
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#testimonials">Gallery</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="/index">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="#dental-services">Services</a></li>
+          <li><a href="about#team">Our Team</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="appointment">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">General Dentistry</a></li>
-          <li><a href="#services">Cosmetic Dentistry</a></li>
-          <li><a href="#services">Orthodontics</a></li>
-          <li><a href="#services">Dental Implants</a></li>
-          <li><a href="#services">Teeth Whitening</a></li>
-          <li><a href="#services">Root Canal</a></li>
+          <li><a href="dental-services">General Dentistry</a></li>
+          <li><a href="dental-services">Cosmetic Dentistry</a></li>
+          <li><a href="dental-services">Orthodontics</a></li>
+          <li><a href="dental-services">Dental Implants</a></li>
+          <li><a href="dental-services">Teeth Whitening</a></li>
+          <li><a href="dental-services">Root Canal</a></li>
         </ul>
       </div>
+
+      
+
+      
 
       <div class="footer-contact">
         <h4>Contact Us</h4>
@@ -2530,7 +2686,7 @@ Keep going sir👍"</p>
         </p>
         <p>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@dentcare.com">info@dentcare.com</a>
+          <a href="mailto:nrkmultispeciality@gmail.com">nrkmultispeciality@gmail.com</a>
         </p>
         <div class="footer-hours">
           <h5>Business Hours</h5>
@@ -2540,12 +2696,12 @@ Keep going sir👍"</p>
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom text-center">
       <p>© <span id="year"></span> NRK Multispeciality Dental Care. All rights reserved.</p>
-      <div class="footer-legal">
+      <!-- <div class="footer-legal">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>
@@ -2670,6 +2826,48 @@ Keep going sir👍"</p>
   setInterval(() => {
     moveCarousel('next');
   }, 5000);
+
+  // ===== REVIEW CARD EXPAND/COLLAPSE =====
+  function checkReviewTextOverflow() {
+    document.querySelectorAll('.review-card').forEach(card => {
+      const textElement = card.querySelector('.review-text');
+      const btnElement = card.querySelector('.review-toggle-btn');
+      
+      if (!textElement || !btnElement) return;
+      
+      // Check if text is truncated by comparing scrollHeight with rendered height
+      const isOverflowing = textElement.scrollHeight > textElement.clientHeight;
+      
+      if (isOverflowing) {
+        btnElement.style.display = 'block';
+      } else {
+        btnElement.style.display = 'none';
+      }
+    });
+  }
+
+  // Run on load and after window resize
+  checkReviewTextOverflow();
+  window.addEventListener('resize', checkReviewTextOverflow);
+
+  // Button click handler
+  document.querySelectorAll('.review-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.review-card');
+      const isExpanded = card.classList.contains('expanded');
+      
+      if (isExpanded) {
+        // Collapse
+        card.classList.remove('expanded');
+        btn.textContent = 'View More';
+      } else {
+        // Expand
+        card.classList.add('expanded');
+        btn.textContent = 'View Less';
+      }
+    });
+  });
 </script>
 
 </body>

@@ -598,8 +598,8 @@
         position: absolute;
         top: -20px;
         left: 20px;
-        width: 140px;
-        height: 130px;
+        width: 100px;
+        height: 90px;
         background: rgba(255, 255, 255, 0.662);
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -608,11 +608,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top:10px;
     }
     .service-detail-number { 
       position: absolute;
-      
-      font-size: 100px;
+      font-size: 60px;
       font-weight: 900;
       line-height: 1;
       z-index: 10;
@@ -638,7 +638,7 @@
       align-items: center;
       gap: 6px;
      
-      max-width:180px;
+      max-width:200px;
       max-height:40px;
       font-family:sans-serif
     }
@@ -1004,7 +1004,7 @@
       margin-bottom: 6px;
     }
     .footer-bottom {
-      display: flex;
+      
       justify-content: space-between;
       align-items: center;
       padding: 24px 0;
@@ -1028,9 +1028,19 @@
     @media (max-width: 1024px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .service-card.featured { grid-row: auto; }
-      .service-detail-inner { grid-template-columns: 1fr; gap: 40px; }
-      .service-detail-inner.reverse .service-detail-image { order: auto; }
-      .service-detail-inner.reverse .service-detail-content { order: auto; }
+      .service-detail-inner { 
+        display: flex;
+        flex-direction: column;
+        gap: 40px; 
+      }
+      .service-detail-inner .service-detail-image {
+        order: 1;
+      }
+      .service-detail-inner .service-detail-content {
+        order: 2;
+      }
+      .service-detail-inner.reverse .service-detail-image { order: 1; }
+      .service-detail-inner.reverse .service-detail-content { order: 2; }
       .process-steps { grid-template-columns: repeat(2, 1fr); }
       .cta-inner { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -1047,8 +1057,18 @@
       .quick-nav-items { gap: 12px; }
       .quick-nav-item { padding: 6px 12px; font-size: 12px; }
       .services-grid { grid-template-columns: 1fr; }
-      .service-detail-inner { gap: 30px; }
-      .service-detail-number { font-size: 80px; }
+      .service-detail-inner { 
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+      }
+      .service-detail-inner .service-detail-image {
+        order: 1;
+      }
+      .service-detail-inner .service-detail-content {
+        order: 2;
+      }
+      .service-detail-number { font-size: 50px; }
       .process-steps { grid-template-columns: 1fr; }
       .process-steps::before { display: none; }
       .process-step { padding: 24px 0; border-bottom: 1px solid var(--border); }
@@ -1079,7 +1099,7 @@
       font-size:14px;
     }
     .service-detail-label{
-      max-width:130px;
+      max-width:200px;
       font-size:13px;
     }
     .service-icon{
@@ -1210,14 +1230,14 @@
       <div class="service-detail-image">
        <div class="service-number-card"><div class="service-detail-number text-gradient-purple">01</div> </div>
              
-        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/Treatments/treatment8.png"></div>
         
       </div>
 
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Dental Implant.png"></div>
-        <div class="service-detail-label text-center">Service 1</div>
+        <div class="service-detail-label text-center">Implants</div>
         </div>
         
         <h2 class="service-detail-title">Dental Implants in Salem</h2>
@@ -1262,7 +1282,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Root Canal.png"></div>
-        <div class="service-detail-label text-center">Service 2</div>
+        <div class="service-detail-label text-center">Root Canal</div>
         </div>
         
         <h2 class="service-detail-title">Root Canal Treatment in Salem</h2>
@@ -1318,7 +1338,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Teeth whitening.png"></div>
-        <div class="service-detail-label text-center">Service 3</div>
+        <div class="service-detail-label text-center">whitening</div>
         </div>
         
         <h2 class="service-detail-title">Teeth Whitening in Salem</h2>
@@ -1360,7 +1380,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Cosmetic DEntistry.png"></div>
-        <div class="service-detail-label text-center">Service 4</div>
+        <div class="service-detail-label text-center">Cosmetic</div>
         </div>
         
         <h2 class="service-detail-title">Cosmetic Dentistry in Salem</h2>
@@ -1416,7 +1436,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Othodontics.png"></div>
-        <div class="service-detail-label text-center">Service 5</div>
+        <div class="service-detail-label text-center">Orthodontics</div>
         </div>
         
         <h2 class="service-detail-title">Orthodontics & Braces in Salem</h2>
@@ -1459,7 +1479,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/General Tooth Icon.png"></div>
-        <div class="service-detail-label text-center">Service 6</div>
+        <div class="service-detail-label text-center">crowns</div>
         </div>
         
         <h2 class="service-detail-title">Dental Crowns & Bridges in Salem</h2>
@@ -1514,7 +1534,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Gum Treatment.png"></div>
-        <div class="service-detail-label text-center">Service 7</div>
+        <div class="service-detail-label text-center">Gum Treatment</div>
         </div>
         
         <h2 class="service-detail-title">Gum Treatment in Salem</h2>
@@ -1556,7 +1576,7 @@
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Tooth Extraction.png"></div>
-        <div class="service-detail-label text-center">Service 8</div>
+        <div class="service-detail-label text-center">Extraction</div>
         </div>
         
         <h2 class="service-detail-title">Tooth Extraction in Salem</h2>
@@ -1590,7 +1610,7 @@
       <div class="service-detail-image">
        <div class="service-number-card"><div class="service-detail-number text-gradient-purple">08</div> </div>
              
-        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/Treatments/treatment8.png"></div>
         
       </div>
     </div>
@@ -1604,14 +1624,14 @@
       <div class="service-detail-image">
        <div class="service-number-card">   <div class="service-detail-number text-gradient-purple">09</div>  </div>
          
-        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/Treatments/treatment9.png"></div>
         
       </div>
 
       <div class="service-detail-content">
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/General Checkup.png"></div>
-        <div class="service-detail-label text-center">Service 9</div>
+        <div class="service-detail-label text-center">Kids Dentistry</div>
         </div>
         
         <h2 class="service-detail-title">Pediatric Dentistry in Salem</h2>
@@ -1653,11 +1673,11 @@
       <div class="service-detail-content" >
         <div class="service-header">
             <div class="service-icon"><img src="./Assets/img/icons/Pediatric Dentistry.png"></div>
-        <div class="service-detail-label text-center">Service 10</div>
+        <div class="service-detail-label text-center">Dental Checkup</div>
         </div>
         
         <h2 class="service-detail-title">General Dental Checkup in Salem</h2>
-        <p class="service-detail-desc">Maintain a healthy smile with regular dental checkups at NRK Multispeciality Dental Care in Salem. We provide comprehensive oral examinations, professional cleanings, tooth-colored fillings, and preventive dental care to detect problems early and avoid costly treatments later. Our experienced dental team focuses on plaque removal, cavity prevention, gum health, and long-term oral wellness to keep your teeth strong, clean, and healthy. Routine checkups help identify dental issues early and support better oral health for every age group.</p>
+        <p class="service-detail-desc">Maintain a healthy smile with regular dental checkups at NRK Multispeciality Dental Care in Salem. We provide comprehensive oral examinations, professional cleanings, and preventive dental care to detect problems early and avoid costly treatments later. Our experienced dental team focuses on plaque removal, cavity prevention, gum health, and long-term oral wellness to keep your teeth strong, clean, and healthy. Routine checkups help identify dental issues early and support better oral health for every age group.</p>
         
         <div class="service-features-grid">
           <div class="service-feature">
@@ -1687,7 +1707,7 @@
       <div class="service-detail-image">
        <div class="service-number-card"> <div class="service-detail-number text-gradient-purple">10</div></div>
               
-        <div class="service-detail-image-placeholder "><img src="./Assets/img/NRK Treatment 1.png"></div>
+        <div class="service-detail-image-placeholder "><img src="./Assets/img/Treatments/treatment10.png"></div>
         
       </div>
     </div>
@@ -1781,33 +1801,33 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="navbar-logo">
-          <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.png"></div>
+          <div class="navbar-logo-icon"><img src="./Assets/nrk white logo.png"></div>
           
         </div>
         <p>Providing exceptional dental care in Salem with modern technology and a compassionate approach. Your smile is our priority.</p>
       </div>
 
-      <div class="footer-col">
+     <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="index.html#team">Our Team</a></li>
-          <li><a href="index.html#testimonials">Gallery</a></li>
-          <li><a href="index.html#footer">Contact</a></li>
+          <li><a href="/index">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="#dental-services">Services</a></li>
+          <li><a href="about#team">Our Team</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="appointment">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#general">General Dentistry</a></li>
-          <li><a href="#cosmetic">Cosmetic Dentistry</a></li>
-          <li><a href="#ortho">Orthodontics</a></li>
-          <li><a href="#implants">Dental Implants</a></li>
-          <li><a href="#whitening">Teeth Whitening</a></li>
-          <li><a href="#rct">Root Canal</a></li>
+          <li><a href="dental-services">General Dentistry</a></li>
+          <li><a href="dental-services">Cosmetic Dentistry</a></li>
+          <li><a href="dental-services">Orthodontics</a></li>
+          <li><a href="dental-services">Dental Implants</a></li>
+          <li><a href="dental-services">Teeth Whitening</a></li>
+          <li><a href="dental-services">Root Canal</a></li>
         </ul>
       </div>
 
@@ -1823,7 +1843,7 @@
         </p>
         <p>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@dentcare.com">info@dentcare.com</a>
+          <a href="mailto:nrkmultispeciality@gmail.com">nrkmultispeciality@gmail.com</a>
         </p>
         <div class="footer-hours">
           <h5>Business Hours</h5>
@@ -1833,12 +1853,9 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom text-center">
       <p>© <span id="year"></span> NRK Multispeciality Dental Care. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
+      
     </div>
   </div>
 </footer>
