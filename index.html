@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NRK Multispeciality Dental Care | Expert Dental Treatment in Salem</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Assets/img/nrk_logo.png">
+
+  
   <!-- SEO Meta Tags -->
   <meta name="description" content="NRK Multispeciality Dental Care in Salem - Expert dental treatments including implants, cosmetic dentistry, orthodontics, and root canal therapy. Trusted by 5000+ patients." />
   <meta name="keywords" content="dentist Salem, dental clinic Salem, dental implants, cosmetic dentistry, orthodontics, root canal" />
@@ -1575,7 +1579,9 @@
       .team-grid { grid-template-columns: 1fr; margin-left:0px; margin-right:0px;}
       .testi-carousel { padding: 0 50px; }
       .testi-card { flex: 0 0 calc(50% - 12px); }
-      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer-brand { text-align: center; }
+      .footer-col { text-align: center; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .cta-buttons { flex-direction: column; }
       .cta-buttons .btn { width: 100%; }
@@ -1606,6 +1612,34 @@
       .testi-card { flex: 0 0 100%; }
       .carousel-prev,
       .carousel-next { width: 40px; height: 40px; font-size: 16px; }
+      .footer-inner { 
+        grid-template-columns: 1fr 1fr;
+        text-align: center; 
+      }
+      .footer-brand { 
+        grid-column: 1 / -1;
+        text-align: center; 
+        padding: 0px 20px;
+        max-width:100%;
+      }
+      .footer-col { 
+        grid-column: auto;
+        text-align: center; 
+      }
+      .footer-contact {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:0px 20px;
+        justify-content:center;
+      }
+      .footer-hours{
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:10px 20px;
+      }
+      .footer-logo-image{
+        align-items:center;
+      }
       .why-image-quote {
         right:0px;
         margin-left:10px;
@@ -2017,7 +2051,7 @@
   <div class="container-nav">
     <nav class="navbar-inner" aria-label="Main navigation">
       <a href="/" class="navbar-logo" aria-label="NRK Dental Care Home">
-        <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.svg"></div>
+        <div class="navbar-logo-icon"><img src="./Assets/NRK-Logo.png"></div>
         
       </a>
       

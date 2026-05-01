@@ -14,7 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Assets/img/nrk_logo.png">
+
   <style>
     /* ===== CSS VARIABLES ===== */
     :root {
@@ -1073,8 +1075,9 @@
       .process-steps::before { display: none; }
       .process-step { padding: 24px 0; border-bottom: 1px solid var(--border); }
       .booking-box { padding: 24px; }
-      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer-brand { text-align: center; }
+      .footer-col { text-align: center; }
       .hero-buttons { flex-direction: column; }
       .hero-buttons .btn { width: 100%; }
     }
@@ -1106,6 +1109,34 @@
       width:50px;
       height:50px;
     }
+    .footer-inner { 
+        grid-template-columns: 1fr 1fr;
+        text-align: center; 
+      }
+      .footer-brand { 
+        grid-column: 1 / -1;
+        text-align: center; 
+        padding: 0px 20px;
+        max-width:100%;
+      }
+      .footer-col { 
+        grid-column: auto;
+        text-align: center; 
+      }
+      .footer-contact {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:0px 20px;
+        justify-content:center;
+      }
+      .footer-hours{
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:10px 20px;
+      }
+      .footer-logo-image{
+        align-items:center;
+      }
     }
     .service-detail-section{
       padding:40px 0;

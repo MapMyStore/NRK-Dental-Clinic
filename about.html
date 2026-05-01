@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
    <title>NRK Multispeciality Dental Care</title>
-    <!-- Standard favicon link -->
-    <link rel="icon" type="image/x-icon" href="./Assets/img/nrk_logo.png">
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Assets/img/nrk_logo.png">
+
 
   <!-- ===== ABOUT PAGE SEO ===== -->
 <title>About NRK Dental Care | Trusted Dental Clinic in Salem</title>
@@ -1656,6 +1657,9 @@
                 margin-top: 16px;
                 width:100%;
             }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer-brand { text-align: center; }
+      .footer-col { text-align: center; }
         }
  
         @media (max-width: 480px) {
@@ -1741,6 +1745,34 @@
                 padding: 12px 24px;
                 width:100%;
             }
+            .footer-inner { 
+        grid-template-columns: 1fr 1fr;
+        text-align: center; 
+      }
+      .footer-brand { 
+        grid-column: 1 / -1;
+        text-align: center; 
+        padding: 0px 20px;
+        max-width:100%;
+      }
+      .footer-col { 
+        grid-column: auto;
+        text-align: center; 
+      }
+      .footer-contact {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:0px 20px;
+        justify-content:center;
+      }
+      .footer-hours{
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:10px 20px;
+      }
+      .footer-logo-image{
+        align-items:center;
+      }
         }
  
         
@@ -1831,8 +1863,9 @@
       #cta h2 { font-size: 28px; }
       #cta p { font-size: 15px; }
 
-      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; }
+   .footer-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer-brand { text-align: center; }
+      .footer-col { text-align: center; }
 
       .navbar-links { gap: 20px; display: none; }
       .navbar-right { display: none; }
@@ -1896,6 +1929,39 @@
 
       #cta h2 { font-size: 20px; }
       #cta p { font-size: 14px; }
+      .footer-inner { 
+        grid-template-columns: 1fr 1fr;
+        text-align: center; 
+      }
+      .footer-brand { 
+        grid-column: 1 / -1;
+        text-align: center; 
+        padding: 0px 20px;
+        max-width:100%;
+        
+      }
+      .footer-brand p{
+        font-size:15px !important;
+      }
+      .footer-col { 
+        grid-column: auto;
+        text-align: center; 
+      }
+      .footer-contact {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:0px 20px;
+        justify-content:center;
+      }
+      .footer-hours{
+        grid-column: 1 / -1;
+        text-align: center;
+        padding:10px 20px;
+      }
+      .footer-logo-image{
+        align-items:center;
+      }
+      
     }
   </style>
 </head>
