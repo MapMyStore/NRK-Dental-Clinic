@@ -831,11 +831,11 @@
     /* ===== FOOTER ===== */
     #footer { background: var(--dark-footer); color: rgba(255,255,255,.7); padding: 64px 0 0; }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08); }
-    .footer-brand { }
+    .footer-brand {  max-width: 250px; }
     .footer-logo { display: flex; align-items: center; gap: 0px; font-size: 20px; font-weight: 800; color: white; margin-bottom: 16px; }
     .footer-logo-icon { width: 42px; height: 42px;  border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 800; }
     .footer-logo-icon img {width:100%;height:100%}
-    .footer-brand p { font-size: 15px; line-height: 1.7; max-width: 250px; }
+    .footer-brand p { font-size: 15px !important; line-height: 1.7; }
     .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; }
     .footer-col ul li { margin-bottom: 10px; }
     .footer-col ul li a { font-size: 14px; transition: color .2s; }
@@ -1961,6 +1961,9 @@
       .footer-logo-image{
         align-items:center;
       }
+      .footer-brand p {
+        max-width :100%;
+      }
       
     }
   </style>
@@ -2524,7 +2527,7 @@ Her expertise includes laser gum therapy, flap surgeries, gum grafting, bone reg
         </div>
           
         </div>
-        <p class="text-center" style = "font-size:12px; font-weight:300"itemprop="description">Providing exceptional dental care in Salem with modern technology and a compassionate approach.</br> Your smile is our priority.</p>
+        <p class="text-center" style = "font-size:12px; font-weight:300"itemprop="description">Providing exceptional dental care in Salem with modern technology and a compassionate approach. Your smile is our priority.</p>
       </div>
 
       <div class="footer-col">

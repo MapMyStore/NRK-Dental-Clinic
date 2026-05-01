@@ -487,7 +487,7 @@
     .footer-logo { display: flex; align-items: center; gap: 0px; font-size: 20px; font-weight: 800; color: white; margin-bottom: 16px; }
     .footer-logo-icon { width: 42px; height: 42px;  border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 800; }
     .footer-logo-icon img {width:100%;height:100%}
-    .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 220px; }
+    .footer-brand p { font-size: 14px !important; line-height: 1.7; max-width: 220px; }
     .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; }
     .footer-col ul li { margin-bottom: 10px; }
     .footer-col ul li a { font-size: 14px; transition: color .2s; }
@@ -497,7 +497,7 @@
     .footer-hours { margin-top: 16px; }
     .footer-hours h5 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 8px; }
     .footer-hours p { font-size: 13px; margin-bottom: 4px; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom { justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
     .footer-bottom p { font-size: 13px; }
     .footer-legal { display: flex; gap: 20px; }
     .footer-legal a { font-size: 13px; }
@@ -558,6 +558,9 @@
         text-align: center; 
         padding: 0px 20px;
         max-width:100%;
+      }
+      .footer-brand p {
+        max-width :100%;
       }
       .footer-col { 
         grid-column: auto;
@@ -868,12 +871,9 @@
       </div>
     </div>
 
-    <div class="footer-bottom" style="color:#6b7280">
+    <div class="footer-bottom text-center" style="color:#6b7280">
       <p>© <span id="year"></span> NRK Multispeciality Dental Care. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
+      
     </div>
   </div>
 </footer>
